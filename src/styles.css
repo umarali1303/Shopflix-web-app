@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1366px !important;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #205b8d !important;
+    border: none !important;
+}

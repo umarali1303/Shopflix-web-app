@@ -1,0 +1,69 @@
+<app-navigation></app-navigation>
+<div class="container">
+    <br>
+    <a routerLink="/home" class="btn btn-primary"><i class="fa fa-angle-left"></i> Continue Shopping</a><br>
+    <p style="padding-top: 10px"> To change Quantity, Edit Quantity and Click on Update button</p>
+    <div *ngIf="cartlist.length>0">
+        <table id="cart" class="table table-hover table-condensed table-borderless">
+            <thead>
+                <tr>
+                    <tr>
+                        <th width="20%">Product Image</th>
+                        <th width=50%>Product Details</th>
+                        <th width="30%"></th>
+                        <th></th>
+                    </tr>
+            </thead>
+            <!-- <tr *ngFor="let cart of cartlist">
+                <td>
+                    {{cart.productname}}
+                </td>
+                <td>{{cart.price | currency:'INR'}}</td>
+                <td>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="number" value="{{cart.quantity}}" #quant>
+                            <input type="hidden" value="{{cart.bufcartId}}" #prod>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-p btn-sm" (click)="update(prod,quant)">Update</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    {{cart.quantity*cart.price | currency:'USD'}}
+
+                </td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="delete(prod)">Delete</button>
+                </td>
+            </tr> -->
+            <tr *ngFor="let tempCartItems of cartlist">
+                <td>
+                    <img src="data:image/png;base64,{{tempCartItems.productimage}}" class="img-responsive" width="150px">
+                </td>
+                <td>
+                    <p>{{tempCartItems.productname}}</p>
+                    <p>{{tempCartItems.price | currency:'INR'}}</p>
+                </td>
+                <td></td>
+                <td>
+                    <button class="btn btn-danger btn-sm" (click)="delete(tempCartItems.bufcartId)">Delete</button>
+                </td>
+            </tr>
+
+
+        </table>
+
+        <div class="row">
+            <div class="col-9">Total Sum : {{totalSum | currency:'USD'}}</div>
+            <div class="offset-1 col-2"><button type="button" class="btn btn-primary align-right" (click)="place()">Checkout <i
+          class="fa fa-angle-right"></i></button></div>
+
+        </div>
+    </div>
+    <div *ngIf="cartlist.length==0" class="alert alert-warning col-md-12" role="alert">
+        Your Shopping Cart is Empty
+    </div>
+</div>

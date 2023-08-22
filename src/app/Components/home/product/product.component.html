@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="product-box">
+        <h6 class="">{{product.productname}}</h6>
+        <img src="data:image/png;base64,{{product.productimage}}" class="img-responsive" height="250px" width="200px" alt="Image">
+        <p class="product-desc"> {{product.description}}</p>
+        <p class="" style="text-align: left;color: #205b8d;">{{product.price | currency:"INR"}}</p>
+        <button class="btn btn-primary cartBtn" style="text-align: right;background-color: #205b8d; border: none;" (click)="addToCart()">Add to cart</button>
+    </div>
+</div>

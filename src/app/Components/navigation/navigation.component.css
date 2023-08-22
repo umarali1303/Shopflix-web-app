@@ -1,0 +1,15 @@
+.navbar {
+    border-radius: 0;
+}
+
+.log {
+    text-align: right;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,0 +1,48 @@
+<app-navigation></app-navigation>
+<div class="container background">
+    <br>
+    <div class="row custom-padding">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <div class="form">
+                <form #f="ngForm" (ngSubmit)=" addAddress()" novalidate>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="text" name="address" [(ngModel)]="model.address" placeholder="Address" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="text" name="city" [(ngModel)]="model.city" placeholder="Atlanta" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="text" name="state" [(ngModel)]="model.state" placeholder="Georgia" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="text" name="country" [(ngModel)]="model.country" placeholder="US" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="text" type="number" name="zipcode" [(ngModel)]="model.zipcode" placeholder="22222" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-m-10">
+                            <input type="number" name="phone" [(ngModel)]="model.phonenumber" placeholder="+12342223456" />
+                        </div>
+                    </div>
+                    <br />
+                    <button type="submit" class="button" name="signup">
+                            Update
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+input.au-input.au-input-xl[_ngcontent-c4] {
+    border-radius: 3px !important;
+    margin-right: 0;
+    font-size: 13px;
+    border: none;
+    padding: 8px;
+}
+
+.au-input-xl {
+    min-width: 700px
+}
+
+.au-btn-submit[_ngcontent-c4] {
+    position: relative;
+    right: 0;
+    padding: 8px;
+    min-width: 95px;
+    color: #fff;
+    border: 1px solid #205b8d;
+    border-radius: 3px;
+    font-size: 13px;
+    background: #205b8d;
+    margin-left: 10px;
+}
+
+.au-btn-submit:hover {
+    background: #05143f
+}
+
+.au-btn-submit>i {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
